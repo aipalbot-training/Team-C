@@ -36,7 +36,7 @@ public class App
         
         Student student = studentService.prepareRecord(name, department, registrationNo);
        
-      System.out.println(studentService.notice(student));
+        System.out.println(studentService.notice(student));
         	
         
  

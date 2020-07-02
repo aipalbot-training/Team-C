@@ -17,9 +17,9 @@ public class StudentService {
 	public Student prepareRecord(String name, String department, long registrationNo) {
 		 Student student = new Student();
 	       
-	       student.setName("Olukotun");
-	       student.setDepartment("Mecahnical");
-	       student.setRegistrationNo(91254142);
+       student.setName(name);
+       student.setDepartment(department);
+       student.setRegistrationNo(registrationNo);
 	       
 	       return student;
 	}
