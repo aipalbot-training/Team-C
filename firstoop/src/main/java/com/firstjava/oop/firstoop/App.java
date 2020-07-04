@@ -52,10 +52,18 @@ public class App
     	System.out.println("Enter Student Department: ");
     	String stuDept = studentDept.nextLine();
     	
+    	Scanner studentLevel = new Scanner(System.in); 
+    	System.out.println("Enter Student Level: ");
+    	String stuLevel = studentLevel.nextLine();
+    	
+    	
+    
     	
     	StudentService studentService = new StudentService();
-    	Student newStudent = studentService.prepareStudent(stuName, stuDept);
+    	Student newStudent = studentService.registerStudent(stuName, stuDept, stuLevel);
     	
-    	System.out.println(studentService.call(newStudent));
+    	
+    	System.out.println(studentService.displayName(newStudent));
+    	
     }
 }
