@@ -14,7 +14,7 @@ public class StudentService {
 	}
 	
 	
-	public Student prepareRecord(String name, String department, long registrationNo) {
+	public Student prepareStudentInfo(String name, String department, long registrationNo) {
 		 Student student = new Student();
 	       
        student.setName(name);
@@ -22,6 +22,17 @@ public class StudentService {
        student.setRegistrationNo(registrationNo);
 	       
 	       return student;
+	}
+	
+	
+	public void add(int bookquantity1, int bookquantity2) {
+		bookquantity1 = 3;
+		bookquantity2=5;
+	}
+	
+	public void addString(String v1, String v2) {
+		v1="inside the method v1";
+		v2="inside the method v2";
 	}
 	
 }

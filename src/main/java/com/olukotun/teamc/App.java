@@ -16,30 +16,56 @@ public class App
 {
     public static void main( String[] args )
     {
-      
+    	StudentService studentService = new StudentService();
     	
     	
-    	Scanner scanner = new Scanner(System.in);
+    	int bookQuantity1 = 2;
+    	int bookQuantity2 = 1;
     	
-    	System.out.println(" Please enter the name of the student ");
+    	studentService.add(bookQuantity1, bookQuantity2);
     	
-    	String name = scanner.next();
+    	System.out.println("BookQuantity1: " + bookQuantity1);
+    	System.out.println("BookQuantity2: " + bookQuantity2);
     	
-    	System.out.println("Enter ther registration number of the student ");
-    	long registrationNo = scanner.nextLong();
+    	String x = "Outside the method v1";
+    	String y = "outside the method v2";
+    	studentService.addString(x, y);
     	
-    	System.out.println("Enter the department of the student ");
     	
-        String department  =  scanner.next();
-        
-        StudentService studentService = new StudentService();
-        
-        Student student = studentService.prepareRecord(name, department, registrationNo);
-       
-        System.out.println(studentService.printInformation(student));
-        	
+    	System.out.println("v1:" + x);
+    	System.out.println("v2:" + y);
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+//    	Scanner scanner = new Scanner(System.in);
+//    	
+//    	System.out.println("Please enter student's name: ");
+//    	
+//    	String name = scanner.next();
+//    	
+//    	System.out.println("Enter the student's registration number ");
+//    	long registrationNo = scanner.nextLong();
+//    	
+//    	System.out.println("Enter the student's department ");
+//    	
+//        String department  =  scanner.next();
+//        
+//        
+//        
+//        Student student = studentService.prepareStudentInfo(name, department, registrationNo);
+//       
+//        System.out.println(studentService.printInformation(student));
+//        	
         
  
      
     }
+  
+    
+  
 }
