@@ -9,7 +9,7 @@ public class Customer {
 	private Gender gender;
 	public int age;
 	public String address;
-	public long phone;
+	public String phone;
 	public String email;
 	public List<Product> products;
 	
@@ -25,6 +25,18 @@ public class Customer {
 
 	private CartItems cartItems; 
 	
+	public CartItems getCartItems() {
+		return cartItems;
+	}
+
+
+
+	public void setCartItems(CartItems cartItems) {
+		this.cartItems = cartItems;
+	}
+
+
+
 	public Customer(String name) {
 		this.name = name;
 	}
@@ -55,11 +67,11 @@ public class Customer {
 		this.address = address;
 	}
 
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 

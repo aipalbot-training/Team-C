@@ -7,15 +7,40 @@ public class Product {
 	
 	public String name;
 	public String brand;
-	public int code;
+	public String code;
+	public String promoCode;
+	public String promoAnswer;
+	
+
 	public double price;
 	public double discount;
 	public int quantity;
 	public String description;
 	public String postion;
 	public double weight;
-	public String photo;
-	public double size;
+	public double pricePerQuantity;
+	
+	public String getPromoAnswer() {
+		return promoAnswer;
+	}
+	public void setPromoAnswer(String promoAnswer) {
+		this.promoAnswer = promoAnswer;
+	}
+	
+	public String getPromoCode() {
+		return promoCode;
+	}
+	public void setPromoCode(String promoCode) {
+		this.promoCode = promoCode;
+	}
+	
+	public double getPricePerQuantity() {
+		return pricePerQuantity;
+	}
+	public void setPricePerQuantity(double pricePerQuantity) {
+		this.pricePerQuantity = pricePerQuantity;
+	}
+
 	private Category category;
 	
 	
@@ -35,10 +60,10 @@ public class Product {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 	public double getPrice() {
@@ -77,21 +102,14 @@ public class Product {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-	public String getPhoto() {
-		return photo;
-	}
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
-	public double getSize() {
-		return size;
-	}
-	public void setSize(double size) {
-		this.size = size;
-	}
+
 	
 	public String toString() {
-		return "Name: " + this.name + ", Code: " + this.code + ", Quantity: " + this.quantity + " ";
+		return "Name: " + this.name + 
+				", Code: " + this.code +
+				", Price: " + this.price +  
+				", Quantity: " + this.quantity + 
+				", TotalPrice " + this.pricePerQuantity;
 	}
 	
 }
