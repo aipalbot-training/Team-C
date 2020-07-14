@@ -52,33 +52,13 @@ public class CustomerService {
 	private void calculatePriceRange(Customer customer) {
 		double cartTotalPrice = 0;
 		int cartQuantity = 0;
-		double discount = 0.3;
 		double tax = 0.1;
-		String promo = "FREE";	
 			for(Product p: customer.getProducts()){
-				if(p.getPromoAnswer().equalsIgnoreCase("yes")) {
-				
-				if(p.getPromoCode().equalsIgnoreCase(promo)){
-				p.setDiscount(discount);
-				double pricePerQuantity = p.getQuantity()*p.getPrice();
+				double pricePerQuantity = p.getQuantity()*p.getPrice()*(1-p.getDiscount());
 				p.setPricePerQuantity(pricePerQuantity);
-				
-				}
-		
-			else {
-				System.out.println("Invalid Code");
-					double pricePerQuantity = p.getQuantity()*p.getPrice();
-					p.setPricePerQuantity(pricePerQuantity);
-					}
-				}
-			else {
-					double pricePerQuantity = p.getQuantity()*p.getPrice();
-					p.setPricePerQuantity(pricePerQuantity);
-				}
 				cartQuantity += p.getQuantity();
 				cartTotalPrice += p.getPricePerQuantity()*(1 + tax);
 			}
-			
 
 		CartItems items = new CartItems();
 		items.setTotalQuantity(cartQuantity);

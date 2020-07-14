@@ -8,9 +8,6 @@ public class Product {
 	public String name;
 	public String brand;
 	public String code;
-	public String promoCode;
-	public String promoAnswer;
-	
 
 	public double price;
 	public double discount;
@@ -20,19 +17,6 @@ public class Product {
 	public double weight;
 	public double pricePerQuantity;
 	
-	public String getPromoAnswer() {
-		return promoAnswer;
-	}
-	public void setPromoAnswer(String promoAnswer) {
-		this.promoAnswer = promoAnswer;
-	}
-	
-	public String getPromoCode() {
-		return promoCode;
-	}
-	public void setPromoCode(String promoCode) {
-		this.promoCode = promoCode;
-	}
 	
 	public double getPricePerQuantity() {
 		return pricePerQuantity;

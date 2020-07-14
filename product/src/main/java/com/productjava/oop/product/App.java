@@ -108,16 +108,26 @@ public class App
     		System.out.println("Do you have a coupon? (Yes/No): ");
     		Scanner answer = new Scanner(System.in);
     		String response = answer.nextLine();
-    		product.setPromoAnswer(response);
+    		
     		if(response.equalsIgnoreCase("yes")) {
+    			String promo = "FREE";	
     			System.out.println("Enter coupon code: ");
     			Scanner coupon = new Scanner(System.in);
     			String code = coupon.nextLine();
-    			product.setPromoCode(code);
+    			
+    			if(promo.equalsIgnoreCase(code)) {
+    				double discount = 0.3;
+        			product.setDiscount(discount);
+    			}
+    			else {
+    				System.out.println("INVALID COUPON!!!");
+    				break;
+    			}
+    			
     		}
     		else {
-    			
-             		break;
+    			double discount = 0;
+    			product.setDiscount(discount);
              	
     		}
     		
