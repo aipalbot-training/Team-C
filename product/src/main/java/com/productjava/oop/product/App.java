@@ -104,11 +104,10 @@ public class App
     }
     
     public static void enterPromo(Customer customer) {
+    	System.out.println("Do you have a coupon? (Yes/No): ");
+		Scanner answer = new Scanner(System.in);
+		String response = answer.nextLine();
     	for(Product product: customer.getProducts()) {
-    		System.out.println("Do you have a coupon? (Yes/No): ");
-    		Scanner answer = new Scanner(System.in);
-    		String response = answer.nextLine();
-    		
     		if(response.equalsIgnoreCase("yes")) {
     			String promo = "FREE";	
     			System.out.println("Enter coupon code: ");
